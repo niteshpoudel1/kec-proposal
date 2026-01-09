@@ -1,0 +1,62 @@
+# Typst output files
+*.pdf
+
+# Typst cache and build directories
+.typst-cache/
+build/
+out/
+output/
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# macOS specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOS thumbnails
+._*
+
+# macOS directories
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# macOS files that might appear in the root of a volume
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Editor specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Backup files
+*.bak
+*.backup
+
+# Log files
+*.log
+
+# Node modules (if using any JS tools)
+node_modules/
+
+# Python virtual environments (if using any Python tools)
+venv/
+env/
+.venv/
+
+# System files
+Thumbs.db
