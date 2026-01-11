@@ -1,11 +1,12 @@
 = Epilogue
 
 == Budget Analysis
-#table(
+#figure(
+  table(
   columns: 4,
   align: (left, center, center, center),
-  stroke: 0.5pt,
-  inset: 8pt,
+  stroke: 1pt,
+  inset: 16pt,
   
   // Header row
   table.header(
@@ -29,6 +30,9 @@
   // Grand total row
   table.cell(colspan: 3, align: left)[*Grand Total*],
   [*1885/-*],
+),
+kind: table,
+caption: [Budget analysis of system components]
 )
 
 == Work Schedule

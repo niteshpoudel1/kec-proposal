@@ -11,8 +11,11 @@ We also acknowledge the #college_department for their encouragement and valuable
 
 #v(1.2cm)
 #student_1
+#linebreak();
 #student_2
+#linebreak();
 #student_3
+#linebreak();
 #student_4
 
 #pagebreak()
