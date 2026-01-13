@@ -4,27 +4,36 @@
 
 == System Block Diagram
 
-=== ESP-PLC Architecture 
+=== Greenhouse Monitoring and Control Architecture
 
-The diagram represents the internal architecture of the ESP32-based programmable logic controller (PLC). It illustrates how different units interact with the ESP32 to perform control operations in a structured and modular way. The entire system is powered by a regulated power supply unit, which ensures stable voltage for the microcontroller and connected components.
+The diagram represents the internal architecture of the greenhouse monitoring and control system based on a microcontroller (Arduino). It demonstrates how different system components interact to perform automated monitoring and control operations in a structured and modular manner.
 
-The digital input unit collects binary signals from external sources like switches, sensors, or buttons. These signals are sent to the processing unit (ESP32), which interprets them based on the programmed ladder logic. For inputs that vary in voltage, such as those from temperature or level sensors, the analog input unit is used. These analog values are read through the ESP32's ADC pins, allowing the PLC to handle more than simple on/off logic.
+Environmental sensors such as temperature and humidity sensors, soil moisture sensors, and light intensity sensors are used to collect real-time data from the greenhouse. These sensors generate analog or digital signals depending on the parameter being measured. Analog sensor values are read through the microcontroller's ADC pins, enabling the system to process continuously varying environmental conditions rather than simple on/off states.
 
-The processing unit, which is the ESP32 microcontroller, runs the OpenPLC runtime environment. It processes all incoming input data, executes the control logic, and determines the appropriate output actions in real time. It serves as the brain of the entire system.
+The processing unit acts as the central controller of the system. It continuously receives sensor data, compares it with predefined threshold values, and executes control algorithms accordingly. Based on the programmed logic, the controller determines appropriate actions to maintain favorable greenhouse conditions.
 
-Outputs are handled by two separate units. The digital output unit sends on/off signals to external devices such as relays, LEDs, or alarms. Meanwhile, the PWM output unit generates pulse-width modulated signals that can control devices like motors or dimmable lights where gradual or variable output is needed.
+Output devices are connected through relay modules or driver circuits. These outputs control actuators such as water pumps for irrigation, exhaust fans for ventilation, heaters for temperature regulation, and artificial lighting systems. The use of relays provides electrical isolation between low-voltage control circuitry and high-voltage devices, ensuring safe operation.
 
-Each component of this architecture works together to create a reliable, flexible, and fully functional PLC system, capable of handling both industrial and educational automation tasks.
+All components work together to create a reliable, flexible, and automated greenhouse system capable of supporting efficient crop growth and resource management.
 
-=== Automatic Water Tank Filling System
+#v(1em)
 
-This diagram illustrates the working flow of your Automatic Water Tank Filling System using an ESP32-based PLC. The system automates the water filling process by monitoring the water level and controlling the motor pump accordingly, all based on ladder logic.
 
-Water is stored in an overhead tank, and its level is continuously monitored by a level sensor circuit. This circuit detects whether the water level has dropped below or risen above preset thresholds (e.g., low and high levels). The sensor outputs are fed to the ESP32-based PLC, which is powered by a dedicated power supply unit. Based on the sensor input and the programmed logic, the ESP32 determines whether the motor needs to be turned ON or OFF.
 
-The PLC then sends an output signal to a relay circuit, which acts as a switch to control the motor pump. If the water level is low, the relay is triggered to turn the motor ON, pumping water into the tank. When the water reaches the high level, the logic disables the relay, turning the motor OFF, thus preventing overflow.
 
-Additionally, LEDs connected to the output of the ESP32 serve as visual indicators, showing the status of the water level or motor operation. This setup ensures automatic water management, reduces manual intervention, and avoids wastage due to overflow or dry running of the pump.
+=== Automated Greenhouse Irrigation and Climate Control System
+This diagram illustrates the working flow of the automated greenhouse irrigation and climate control system. The system automates irrigation and climate regulation by continuously monitoring soil moisture, temperature, and humidity levels inside the greenhouse.
+
+Soil moisture sensors measure the water content of the soil and provide feedback to the controller. When the soil moisture level falls below a predefined threshold, the controller activates the water pump through a relay module, supplying water to the plants. Once the desired moisture level is reached, the pump is automatically turned off, preventing over-irrigation.
+
+Similarly, temperature and humidity sensors monitor the greenhouse environment. If the temperature exceeds the set limit, ventilation fans are activated to reduce heat. In cold conditions, heating elements may be turned on to maintain optimal temperature. This closed-loop control mechanism ensures stable environmental conditions at all times.
+
+The automated operation reduces manual effort, conserves water and energy, and improves plant growth by maintaining consistent and optimal greenhouse conditions
+
+
+
+
+
 
 === Flow Chart
 #flow_chart_figure

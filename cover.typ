@@ -16,7 +16,7 @@
   #college_logo
 
   #v(1cm)
-  [Subject Code: EX 654]
+  [Subject Code: ]
 
   #v(0.8cm)
   #strong[A MINOR PROJECT PROPOSAL ON]

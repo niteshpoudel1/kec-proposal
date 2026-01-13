@@ -1,14 +1,15 @@
 #let college_name = "Kantipur Engineering College"
 #let college_department = "Department of Computer and Electronics Engineering"
 
-#let project_name = "PROGRAMMABLE LOGIC CONTROLLER (PLC) IMPLEMENTATION USING ESP32 FOR INDUSTRIAL AUTOMATION"
+#let project_name = "Automated Greenhouse Monitoring and Control System"
+
 
 #let student_1 = "Rachita Dhungana (006/BEI/075)"
 #let student_2 = ""
 #let student_3 = ""
 #let student_4 = ""
 
-#let submission_date = "June, 2025"
+#let submission_date = "January, 2025"
 
 #let college_logo = [
   #image("/media/logo.jpg", width: 1.8in)
@@ -56,13 +57,6 @@
 )
 ]
 
-#let ultrasonic_sensor_figure = [
-  #figure(
-  image("/media/ultrasonic_sensor.jpg", width: 50%),
-  caption: [Ultrasonic sensor.],
-)
-]
-
 #let flow_chart_figure = [
   #figure(
   image("/media/flow_chart.png"),
@@ -74,5 +68,19 @@
   #figure(
   image("/media/dht22_sensor.jpg"),
   caption: [DHT22 Sensor.],
+)]
+
+#let ldr_sensor = [
+  #figure(
+  image("/media/ldr.webp"),
+  caption: [Light-Dependent Resistor.],
+  )
+
+]
+
+#let soil_sensor= [
+  #figure(
+  image("/media/soil_sensor.webp", width: 50%),
+  caption: [Soil Moisture sensor.],
 )
 ]
