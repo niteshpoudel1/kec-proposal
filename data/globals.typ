@@ -69,3 +69,10 @@
   caption: [Flow chart of the system.],
 )
 ]
+
+#let dh22_sensor = [
+  #figure(
+  image("/media/dht22_sensor.jpg"),
+  caption: [DHT22 Sensor.],
+)
+]

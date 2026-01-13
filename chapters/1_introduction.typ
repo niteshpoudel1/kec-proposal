@@ -8,37 +8,25 @@
 
 #v(1em)
 
-In the industrial world, automation plays a significant role in improving efficiency, safety, and precision. One of the key components of any automation system is the Programmable Logic Controller (PLC), which processes real-time input data and generates control outputs based on logical operations. Traditional PLCs are widely used in industries but are often expensive, inflexible, and not easily scalable for small projects or educational use.
-
-The advancement of low-cost microcontrollers like the ESP32 and the availability of open-source platforms such as OpenPLC have made it possible to replicate PLC behavior using affordable hardware. This has opened up new opportunities in both education and small-scale industrial automation.
-
+Greenhouse farming plays a crucial role in modern agriculture by enabling controlled cultivation of crops independent of external climatic conditions. By regulating environmental parameters such as temperature, humidity, soil moisture, and light intensity, greenhouses help improve crop yield and quality. However, traditional greenhouse management systems often rely on manual observation and control, which can be inefficient and inaccurate. With increasing pressure to meet food demand while conserving water and energy, the adoption of smart and automated agricultural technologies has become essential.
 
 == Problem Statement
 
 #v(1em)
-
-Although traditional PLCs are highly reliable and robust, their high cost and proprietary nature limit their use in academic projects, prototype development, and low-budget automation tasks. Additionally, small-scale industries and household systems often lack intelligent control systems for managing water tanks and other resources, leading to issues such as manual labor, overflow, and resource wastage.
-
-There is a need for a cost-effective, programmable, and flexible PLC solution that can perform standard industrial tasks like liquid level control, while being accessible for students, researchers, and small businesses.
+Manual greenhouse monitoring and control methods are time-consuming, prone to human error, and incapable of responding quickly to sudden environmental changes. Inconsistent regulation of climatic parameters can negatively affect plant growth, reduce productivity, and lead to excessive use of resources such as water and electricity. Additionally, continuous human supervision increases labor costs and limits scalability. These challenges highlight the need for an automated system that can monitor environmental conditions in real time and apply precise control actions to maintain optimal growing conditions.
 
 #v(1em)
 
 == Overview
 
 #v(1em)
-
-This project focuses on the implementation of a PLC using ESP32, an affordable microcontroller with sufficient I/O capabilities and support for real-time operations. The project uses the OpenPLC platform, which allows ladder logic programming based on IEC 61131-3 standards, replicating the logic control style of industrial PLCs.
-
-The project demonstrates the working of this ESP32-based PLC by automating a Water Tank Filling System. The system uses level sensors to detect water levels and automatically turns the pump on or off using a relay, preventing overflows and ensuring proper water management. All logic is programmed using ladder diagrams and uploaded to the ESP32.
-
+This project proposes a smart greenhouse monitoring and control system that utilizes sensors to continuously collect data on key environmental parameters, including temperature, humidity, light and soil moisture. The collected data is processed by an embedded control unit, which automatically activates actuators such as irrigation pumps, ventilation fans, and heating systems when predefined threshold values are reached. The system enables real-time monitoring and automated decision-making, reducing human intervention while improving efficiency, crop health, and resource utilization. This approach supports sustainable agricultural practices and enhances overall greenhouse productivity.
 #v(1em)
 
 == Objective
 
 #v(1em)
-
-- To design and implement a cost-effective, programmable logic controller (PLC) using the ESP32 microcontroller and the OpenPLC platform,
-- To demonstrate its industrial automation capabilities through an Automatic Water Tank Filling System using ladder logic programming.
+The objective of this project is to design and implement a smart greenhouse monitoring and control system that automatically maintains optimal environmental conditions through real-time sensing and control, thereby enhancing crop productivity and efficient resource utilization.
 
 == Features/Applications
 
@@ -47,39 +35,39 @@ The project demonstrates the working of this ESP32-based PLC by automating a Wat
 #list(
   tight: false,
   [
-  #strong([Ladder Logic Control via OpenPLC Platform])
+  #strong([Real-Time Environmental Monitoring])
   #linebreak()
-  The system is programmed using ladder logic on the OpenPLC platform, providing seamless and industry-standard logic execution compatible with IEC 61131-3.
+  The system continuously monitors key greenhouse parameters such as temperature, humidity, soil moisture and light intensity using appropriate sensors, ensuring accurate and timely data acquisition for optimal plant growth.
   ],
   [
-  #strong([Dual Compatibility: AC and DC Load Control])
+  #strong([Automated Climate Control])
   #linebreak()
-  The use of relay-based output switching allows the system to safely control both AC and DC loads, making it highly flexible for diverse automation tasks.
+  Based on sensor feedback, the system automatically controls actuators such as fans, heaters, lights and irrigation pumps to maintain predefined environmental conditions.
   ],
   [
-  #strong([Remote Diagnostics and Configuration via Wi-Fi])
+  #strong([Data Logging and Analysis])
   #linebreak()
-  Built on the ESP32, the system supports wireless access for real-time monitoring, configuration, and remote firmware updates, allowing for on-the-go maintenance and debugging.
+  Sensor data is stored for historical analysis allowing users to study environmental trends, evaluate system performance and make informed decisions for improved agricultural productivity.
   ],
   [
   #strong([Low-Cost and Modular Design])
   #linebreak()
-  Utilizes open-source software and easily available components, making it budget-friendly, especially for educational, research, or small-scale industrial use. Its modular I/O setup supports expansion with additional sensors and actuators.
+  The system utilizes affordable, easily available components and a modular architecture, making it suitable for small-scale farmers, academic projects, and research applications, with flexibility for future expansion.
   ],
   [
-  #strong([Real-Time Response and Reliability])
+  #strong([Energy-Efficient Operation])
   #linebreak()
-  Designed for responsive and reliable automation, mimicking the behavior of traditional PLCs with significantly lower hardware complexity.
+  Automated control minimizes unnecessary operation of devices, reducing power consumption and improve overall energy effecieny of the greenhouse.
   ],
   [
-  #strong([Safety and Electrical Isolation])
+  #strong([User-Defined Threshold Settings ])
   #linebreak()
-  Output relays and input protections ensure safe control of high-voltage devices without risking the microcontroller.
+  Users can set customized threshold values for environmental parameters, enabling the system to adapt to different crops and seasonal requirements
   ],
   [
   #strong([Wide Range Application])
   #linebreak()
-  Industrial and smart home automation using AC/DC loads, industrial process control for motors and sensors, remote monitoring and diagnostics over Wi-Fi, and educational platform for learning PLC and ladder logic.
+  Applicable in commercial greenhouses,research laboratories, educational institutions, nursery management and smart agriculture practices for sustainable farming.
   ]
 )
 
@@ -88,12 +76,10 @@ The project demonstrates the working of this ESP32-based PLC by automating a Wat
 #v(1em)
 
 === Economic Feasibility
-The system is highly economical, especially when compared to conventional PLCs. It is well-suited for academic projects, training purposes, and light industrial tasks, offering significant value for money while delivering core PLC functionality.
-
+The implementation of a greenhouse monitoring and control system is economically viable for commercial and mid-scale farms, as it can significantly increase crop yields and reduce labor, water, and energy costs. While the initial investment in sensors, controllers, actuators, and communication modules may be relatively high, the long-term savings and improved productivity can offset these costs. Small-scale farmers may face challenges affording the system independently, but financial support through cooperatives, government subsidies, or agricultural development programs can make it more accessible. Overall, the system offers a cost-effective solution to enhance efficiency, profitability, and sustainability in greenhouse farming.
 === Technical Feasibility
-The proposed ESP32-based PLC system is technically feasible due to the availability of low-cost, reliable hardware and mature open-source platforms like OpenPLC. The ESP32 offers sufficient processing power, multiple I/O pins, and built-in Wi-Fi, making it suitable for real-time control and remote configuration. Components such as relays and water level sensors are readily available and easily interfaced with the microcontroller. Programming with ladder logic ensures compatibility with industrial standards. The system is modular, scalable, and can be adapted for various automation tasks with minimal effort.
+The greenhouse monitoring and control system is technically feasible, as it relies on widely available sensors, controllers, and actuators for monitoring and regulating temperature, humidity, soil moisture, and irrigation. The system can operate reliably using local electricity or battery/solar backup in areas with unstable power supply. Its design is simple and robust, requiring only basic electronic components and straightforward wiring, which makes installation, maintenance, and troubleshooting manageable by local technicians or trained farmers. This ensures that the system can be effectively implemented and sustained across diverse greenhouse setups.
 === Operational Feasibility
-
-The proposed system is operationally feasible as it is designed to perform a well-defined and practical task automatic water tank filling using programmable logic and real-time sensor input. The system mimics standard industrial PLC behavior, making it intuitive for users familiar with ladder logic. Its relay-based output allows safe control of AC and DC loads, while the ESP32’s built-in Wi-Fi enables remote monitoring and configuration. The system requires minimal maintenance, is easy to operate, and can be scaled or repurposed for other automation applications, ensuring practical usability in real-world scenarios.
+The greenhouse monitoring and control system is operationally feasible , as it can be managed with basic training for farmers on system operation, sensor monitoring, and actuator maintenance. Routine tasks such as checking sensors, adjusting thresholds, and maintaining irrigation are simple and can be performed without specialized expertise. The system is adaptable to diverse climatic conditions, allowing farmers to maintain optimal growing environments year-round. With proper training and guidance from agricultural extension services, the system can be reliably operated and maintained, ensuring consistent crop productivity and efficient use of resources.
 
 #pagebreak()

@@ -1,6 +1,7 @@
 = Epilogue
 
 == Budget Analysis
+
 #figure(
   table(
   columns: 4,
@@ -17,19 +18,23 @@
   ),
   
   // Data rows
-  [ESP-32], [1], [800], [800],
-  [DC water pump], [1], [-], [300],
-  [Relay (12v)], [5], [60], [300],
-  [Resistors], [20], [-], [50],
-  [Diode], [5], [-], [50],
-  [Optocoupler], [15], [-], [200],
-  [LED], [15], [5], [75],
-  [Ultrasonic Sensor], [1], [60], [60],
-  [2-Terminal connector], [10], [5], [50],
-  
+  [Arduino Uno R3 ], [1], [800], [800],
+  [DHT22 Sensor], [1], [-], [500],
+  [4-Channel 5V Relay Module (Opto-isolated)], [1], [440], [440],
+  [Capacitive Soil Moisture Sensor], [1], [350], [350],
+  [16x2 LCD with I2c Module], [1], [200], [200],
+  [Light Dependent Resistor (LDR)], [2], [170], [340],
+  [12V 2A DC Power Adapter], [1], [350], [350],
+  [Jumper Wires (M-M, M-F, F-F)], [1set], [200], [200],
+  [MB102 Breadboard], [1], [300], [300],
+  [5V DC Submersible Water Pump], [1], [250], [250],
+  [9W LED Bulb], [1], [210], [210],
+  [12V PTC Heating Element (50-230°C)], [1], [450], [450],
+  [12V DC High-Speed Ventilation Fan], [1], [400], [400],
+
   // Grand total row
   table.cell(colspan: 3, align: left)[*Grand Total*],
-  [*1885/-*],
+  [*4990/-*],
 ),
 kind: table,
 caption: [Budget analysis of system components]
@@ -40,18 +45,11 @@ caption: [Budget analysis of system components]
 The work schedule was meticulously planned to ensure the timely completion of the entire project. The project was divided into several stages, encompassing research and development, hardware and software integration, testing, and fine-tuning.
 
 == Expected Outcome
+The primary outcome is an autonomous,system capable of maintaining a stable microclimate between 18 degree celcius and 27 degree celcius and relative humidity between 50% and 70%, which is optimal for high-value crops like tomatoes and capsicums. The project is expected to achieve a 30% to 42% reduction in water waste through precision irrigation, ensuring resource efficiency in water-scarce rural environments. Economically, the prototype will confirm the feasibility of a low-cost automation solution built for under NPR 5,000 with monthly energy costs below NPR 170, while providing a persistent data seasonal performance analysis.
 
-The ultrasonic sensor (HC-SR04) in the ESP32-based PLC will enable accurate, real-time water level monitoring in the Automatic Water Tank Filling System. It will reliably measure distances (2-400 cm, ~1 cm accuracy), allowing the PLC to execute ladder logic in OpenPLC to control the water pump via a relay. The system will automatically turn the pump ON when the water level drops below a low threshold and OFF when the tank reaches a full threshold, preventing overflow and ensuring efficient water management. LEDs will provide visual feedback on system status (e.g., pump ON, tank full), and Wi-Fi connectivity will enable remote monitoring of water levels. The setup will be cost-effective (~60/- for the sensor), modular, and scalable for other automation tasks, delivering robust  performance for educational and small-scale industrial applications.
 
-- A working programmable logic controller will be developed using the ESP32 microcontroller, running the OpenPLC runtime. The system will be capable of real-time control and logic execution using ladder logic programming.
 
-- Reliable execution of ladder logic programs developed in OpenPLC for industrial-grade automation.
 
-- The system will be able to control both AC and DC electrical loads (such as motors, lamps, or fans) using electromechanical relays, ensuring safe and flexible load management.
-
-- Remote access to system diagnostics and configuration via built-in Wi-Fi.
-
-- Full implementation on low-cost, scalable hardware suitable for modernizing legacy PLC systems.
 
 
 #pagebreak()

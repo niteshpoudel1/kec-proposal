@@ -4,14 +4,14 @@
 
 == Hardware Requirements
 
-=== ESP32 Development Board
-ESP32 is a low-cost, low-power, and highly versatile microcontroller with integrated Wi-Fi and Bluetooth connectivity. ESP32 is used as the core controller for automating airport baggage handling conveyor systems. It features a dual-core processor and a wide range of digital and analog input/output pins, making it ideal for managing motors, sensors, and real-time control tasks. Its built-in wireless capabilities allow for remote monitoring, diagnostics, and system updates. The ESP32 can run ladder logic programs developed using the OpenPLC platform, enabling robust, industrial-style automation in a compact and energy-efficient design.
-#esp32_figure
+=== Temperature/ Humidity Sensor
+In this greenhouse monitoring and control system, the DHT22 sensor is used to measure temperature accurately and reliably. The DHT22 is a digital sensor capable of measuring temperature in the range of −40 °C to 80 °C with an accuracy of ±0.5 °C, making it ideal for controlling the microclimate inside greenhouses. It also measures humidity, which is an added advantage for integrated environmental monitoring. The sensor operates on a simple digital interface, allowing easy connection with microcontrollers or controller units for automated control of actuators such as fans, heaters, and water pumps. The DHT22 is durable and can withstand the humid conditions commonly found in greenhouses.By providing real-time and accurate temperature data, the DHT22 enables efficient climate control, improves crop growth, and reduces energy and water consumption.
+#dh22_sensor
 
 #v(1em)
 
 === Relay Module
-A relay module is an electrically operated switch that allows a low-power control signal to switch a higher power circuit, making it suitable for controlling actuators like linear actuators. It acts as an intermediary, enabling a microcontroller or other control system to manage devices that require more power than the control system can directly provide. It’s enables the ESP32 (low-power device) to control water pumps or solenoid valves, which run on 5V, 12V, or 220V.
+A relay module is an electrically operated switch that allows a low-voltage control circuit, such as a microcontroller, to turn on or off a high-voltage device like a water pump, fan, or heater in a greenhouse. In this system, the relay module acts as the interface between the controller and actuators, enabling automated control of irrigation, ventilation, and heating based on sensor readings. Typical relay modules operate at 5V or 12V DC for the control input and can switch AC or DC loads up to 10A or higher, depending on the design. They provide electrical isolation between the low-power control circuit and high-power devices, ensuring safety for both the electronics and users.Using relay modules ensures reliable and precise automation of all electrical devices in the greenhouse, reducing manual work and improving overall system efficiency.
 #relay_module_figure
 
 #v(1em)
